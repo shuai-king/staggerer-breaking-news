@@ -42,7 +42,7 @@ a {
   height: 40px;
 }
 
-.text-avatar {
+.icon {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -55,4 +55,15 @@ a {
   position: relative;
   top: 4px;
   margin-right: 10px;
+}
+.layui-nav-item{
+  position: relative;
+}
+.layui-icon{
+  position: absolute;
+  top: 0px;
+  left: 2px;
+}
+a {
+  padding-left: 60px !important;
 }

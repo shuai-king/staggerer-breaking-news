@@ -41,16 +41,17 @@ $("#form_reg").on("submit",function(e){
 })
 
 //登录请求
-$("#form_login").on("submit",function(){
+$("#form_login").on("submit",function(e){
 e.preventDefault()
 let data = $(this).serialize()
 
 $.ajax({
-  url: 'http://ajax.frontend.itheima.net/api/login',
+  url: '/api/login',
   method: 'POST',
   // 快速获取表单中的数据
   data,
   success: function(res) {
+    console.log(res);
     if (res.status !== 0) {
       return layer.msg('登录失败！')
     }
@@ -61,9 +62,7 @@ $.ajax({
     location.href = '/index.html'
   }
 })
-
-
-
+})
 
 
 
